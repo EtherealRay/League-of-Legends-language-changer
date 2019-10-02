@@ -9,10 +9,8 @@ LeagueClient_cml = '\LeagueClient/LeagueClient.exe" --locale=th_TH --landing-tok
 
 for process in processes:
     if LeagueClient_cml in str(process.Commandline):
-        print(process.ProcessId , process.Name)
         commandline = str(process.Commandline).replace('--locale=th_TH' , '--locale=en_US')
         commandline = "@echo off\n" + commandline
-        print(commandline)
         #save bat
         f = open("(English) League of Legends.bat", "w")
         f.write(commandline)
