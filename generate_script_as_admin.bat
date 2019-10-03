@@ -14,7 +14,7 @@ ECHO %TEMPVAR% > start_league_of_legends.bat
 
 
 
-REM run league of legends in en_US
+REM change language from th_TH to en_US
 SETLOCAL ENABLEDELAYEDEXPANSION
 for /f "delims=" %%a in (start_league_of_legends.bat) do (
     SET s=%%a
