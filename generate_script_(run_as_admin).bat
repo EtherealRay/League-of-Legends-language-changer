@@ -10,13 +10,13 @@ FOR /F "delims=" %%A IN ('%COMMAND%') DO (
 
 :Print
 
-ECHO %TEMPVAR% > run_league_of_legends.bat
+ECHO %TEMPVAR% > start_league_of_legends.bat
 
 
 
 REM run league of legends in en_US
 SETLOCAL ENABLEDELAYEDEXPANSION
-for /f "delims=" %%a in (run_league_of_legends.bat) do (
+for /f "delims=" %%a in (start_league_of_legends.bat) do (
     SET s=%%a
     SET s=!s:th_TH=en_US!
     ECHO !s!
